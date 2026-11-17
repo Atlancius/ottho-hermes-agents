@@ -33,6 +33,9 @@
       "Qu'est-ce qui attend une mise à jour sur mon VPS ?",
       "Où en est mon agent mises à jour ?"
     ],
-    "brandColor": "#8B7CF6"
+    "brandColor": "#8B7CF6",
+    "screenshots": [
+      "./assets/cover.png"
+    ]
   }
 }

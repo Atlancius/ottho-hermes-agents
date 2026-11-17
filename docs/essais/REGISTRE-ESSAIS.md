@@ -4,12 +4,19 @@ Append-only : la plus récente en haut. On ne supprime jamais une fiche ratée.
 
 | ID | Date | Sortie | Verdict | Une ligne |
 |---|---|---|---|---|
+| E-005 | 2026-11-17 | `plugins/*/assets/cover.png` | ✅ retenu | 3 couvertures marketplace Codex, style des fiches Ottho existantes |
 | E-004 | 2026-11-17 | banc `ottho-test`, profil `essaimail` | ⚠️ partiel | plugin chargé par la vraie gateway ; IMAP réel non testé (aucune boîte d'essai) |
 | E-003 | 2026-11-17 | banc `ottho-test`, profil `essaisecurite` | ✅ retenu | installation réelle, instantané de posture complet, garde-fous de tous les profils lus |
 | E-002 | 2026-11-17 | banc `ottho-test`, profil `essaiupdates` | ✅ retenu (après correctifs) | installation réelle, hook et moniteur vérifiés dans la cellule |
 | E-001 | 2026-11-17 | `tests/test_kits.py` | ✅ retenu | 19 tests hors ligne, Windows et Ubuntu WSL |
 
 ---
+
+## E-005 — Couvertures marketplace (2026-11-17)
+- **Sortie** : `plugins/agent-{mail,updates,securite}/assets/cover.png` (1672x941) ; source maître et manifeste dans le dossier marketing du projet (`Projets/Ottho-Hermes-Agents-2026-11-17`).
+- **Recette** : Codex `image_gen` via `codex exec` (abonnement ChatGPT), un job par image, 3 en parallèle ; références : couvertures Ottho Hermes VPS et Ottho Brain ; prompt = recette de la couverture Ottho Brain (argile 3D pastel, table en bois, fenêtre floue, aucun texte) + sujet propre à chaque agent (robot qui trie des enveloppes ; robot avec checklist et colis de mise à jour ; robot loupe et dôme bouclier).
+- **Résultat** : 3 images retenues au premier essai, aucun texte ni logo parasite, style cohérent avec les fiches existantes.
+- **Verdict** : ✅ retenu (recette R-003).
 
 ## E-004 — Agent mail sur Hermes réel (2026-11-17)
 - **Sortie** : profil `essaimail` dans `hermes-equipes` (distro WSL `ottho-test`, kit Ottho Hermes VPS 1.0.0, Hermes v0.22.2).

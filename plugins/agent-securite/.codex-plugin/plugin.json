@@ -34,6 +34,9 @@
       "Ajoute mon adresse IP aux sources SSH connues de l'agent sécurité.",
       "Où en est mon agent sécurité ?"
     ],
-    "brandColor": "#8B7CF6"
+    "brandColor": "#8B7CF6",
+    "screenshots": [
+      "./assets/cover.png"
+    ]
   }
 }
