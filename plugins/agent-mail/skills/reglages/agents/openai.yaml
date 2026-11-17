@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent mail : réglages"
+  short_description: "Adapter le tri à tes dossiers et ton ton"
+  default_prompt: "Adapte le tri de mon agent mail à mes dossiers avec $reglages."
+policy:
+  allow_implicit_invocation: true

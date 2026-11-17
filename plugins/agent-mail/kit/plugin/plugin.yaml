@@ -1,0 +1,28 @@
+name: mail-agent
+version: 1.0.0
+description: "Agent mail Ottho : déclenchement IMAP IDLE, tri dans tes dossiers, brouillons de réponse. N'envoie jamais de mail."
+author: Ottho Academy
+kind: standalone
+platforms:
+  - linux
+provides_tools:
+  - mail_get
+  - mail_triage
+  - mail_save_draft
+  - mail_discard_draft
+  - mail_notify
+  - mail_folders
+  - mail_recent
+  - mail_scan
+  - mail_move
+  - mail_file_supplier
+  - mail_quarantine
+  - mail_folder_create
+  - mail_folder_rename
+  - mail_folder_merge
+  - mail_folder_info
+  - knowledge_search
+  - knowledge_read
+  - owner_fact_save
+  - owner_fact_list
+  - owner_fact_retire

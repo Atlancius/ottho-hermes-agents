@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent sécurité : statut"
+  short_description: "État et dépannage de l'agent sécurité"
+  default_prompt: "Où en est mon agent sécurité ? Utilise $statut."
+policy:
+  allow_implicit_invocation: true

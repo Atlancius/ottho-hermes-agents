@@ -1,0 +1,19 @@
+{
+  "name": "agent-updates",
+  "version": "1.0.0",
+  "description": "Installe sur ton VPS un agent Hermes qui suit chaque jour les mises à jour du système, de Docker et de Hermes Agent, lit les notes de version et te propose sur Telegram quoi faire, quand et avec quelle commande. Il n'applique rien lui-même.",
+  "author": {
+    "name": "Ottho Academy",
+    "url": "https://ottho.co"
+  },
+  "homepage": "https://ottho.co",
+  "keywords": [
+    "ottho",
+    "hermes-agent",
+    "vps",
+    "mises-a-jour",
+    "apt",
+    "docker",
+    "telegram"
+  ]
+}

@@ -1,0 +1,109 @@
+# Agent mail Ottho — réglages NON secrets (adresse et mot de passe vivent dans le .env du profil, jamais ici).
+# Relu à chaud : pas besoin de relancer la gateway après modification, sauf pour la liste des marques et des registres.
+
+# Nom utilisé par l'agent pour parler de toi (« Tu traites un mail de la boîte de … »).
+owner_name: @@OWNER@@
+
+# shadow : l'agent décide et te prévient, la boîte n'est JAMAIS modifiée (commence toujours par là).
+# live   : l'agent déplace, pose l'étoile et enregistre les brouillons. Il n'envoie jamais rien.
+mode: shadow
+
+# true : un mail qui attend ta réponse reste dans la boîte de réception, avec une étoile (ta liste de choses à faire).
+reply_keeps_inbox: true
+
+imap:
+  host: @@IMAP_HOST@@      # ex. imap.hostinger.com, imap.gmail.com, outlook.office365.com, mail.ovh.net, imap.ionos.fr
+  port: 993
+  inbox: INBOX
+  drafts: ""                # vide = détection automatique du dossier Brouillons
+
+limits:
+  max_concurrent: 2         # mails traités en parallèle
+  body_chars: 12000         # corps du mail lu par l'agent
+  max_fetch_bytes: 15000000
+  watchdog_minutes: 20
+  retention_days: 60        # durée de conservation des fiches locales (données personnelles)
+  idle_cycle_seconds: 540
+
+# Tes marques ou activités, si une même boîte sert à plusieurs (une seule : laisse une entrée).
+# La clé (minuscules) sert dans les notifications « Prospect <clé> ». Le ton et les faits par marque vont dans SOUL.md.
+brands:
+  principale:
+    label: "Mon activité"
+    description: "ce que tu fais, pour qui, en une phrase"
+    from_name: @@OWNER@@
+    signature: @@OWNER@@
+
+# Registres de ton possibles pour les brouillons.
+registers: [formel, chaleureux, technique, neutre]
+
+# Tes propres domaines (formulaires de contact de tes sites, notifications) : un mail authentifié venant d'eux
+# n'est jamais classé indésirable ni mis à l'écart par l'agent.
+protected_domains: []
+
+# Relais de transfert dont le verdict d'authentification est fiable (ex. Cloudflare Email Routing : cloudflare-email.net).
+trusted_forwarders: []
+
+# true : un mail que le filtre antispam du serveur a rangé dans Junk revient dans la réception pour l'avis de l'agent.
+junk_rescue: true
+
+# Fournisseurs connus (domaine -> dossier Fournisseurs/<name>/<type>). Types : Echanges, Commandes, Factures, Suivis, Paiements.
+suppliers: []
+#  - {name: Grossiste Dupont, domains: [dupont-pro.fr]}
+#  - {name: Énergie, domains: [edf.fr], kind: Factures}
+
+folders:
+  quarantine: Suspects
+  suppliers: Fournisseurs
+  supplier_kinds: [Echanges, Commandes, Factures, Suivis, Paiements]
+
+# Catégories : clé -> dossier IMAP (nom affiché) + description lue par l'agent. Adapte les noms à tes dossiers existants.
+categories:
+  clients:
+    folder: Clients et prospects
+    description: "Clients et prospects : demandes, devis, suivis, réclamations, rendez-vous"
+  fournisseurs:
+    folder: Fournisseurs
+    description: "Fournisseurs, grossistes, commandes et factures fournisseurs"
+  partenaires:
+    folder: Partenaires
+    description: "Partenaires et plateformes avec lesquels tu travailles"
+  administratif:
+    folder: Administratif
+    description: "Impôts, URSSAF, juridique, assurances, expert-comptable, administrations, contrats"
+  banque:
+    folder: Banque et paiements
+    description: "Banque, encaissements, prélèvements, factures payées, solutions de paiement"
+  livraisons:
+    folder: Livraisons
+    description: "Suivi de colis, expéditions, transporteurs"
+  securite:
+    folder: Securite et acces
+    description: "Codes de connexion, alertes de sécurité, réinitialisations de mot de passe"
+  sollicitations:
+    folder: Sollicitations
+    description: "Démarchage commercial non sollicité, propositions à froid"
+  publicites:
+    folder: Publicites
+    description: "Promotions et publicités commerciales"
+  newsletters:
+    folder: Newsletters
+    description: "Newsletters, veille, contenus éditoriaux"
+  outils:
+    folder: Outils automatiques
+    description: "Notifications automatiques d'outils et services en ligne"
+  indesirables:
+    folder: Junk
+    description: "Spam, hameçonnage, usurpation, mails suspects"
+  autre:
+    folder: INBOX
+    description: "Rien ne correspond clairement : reste dans la boîte de réception"
+
+# Base de connaissances en lecture seule (dossier de notes Markdown copié dans le profil avec « agent.sh knowledge-sync »).
+# Seuls les sous-dossiers listés dans include sont lus ; exclude_dirs et les pages au statut exclu ne le sont jamais.
+knowledge:
+  root: @@KNOWLEDGE_ROOT@@
+  include: []               # ex. [services, clients, fournisseurs] ; vide = tout le dossier
+  exclude_dirs: [prive, finances, strategie, archives]
+  exclude_status: [archived, draft, idea, superseded]
+  max_read_chars: 12000

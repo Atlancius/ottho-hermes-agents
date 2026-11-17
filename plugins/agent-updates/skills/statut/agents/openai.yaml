@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent mises à jour : statut"
+  short_description: "État et dépannage de l'agent mises à jour"
+  default_prompt: "Où en est mon agent mises à jour ? Utilise $statut."
+policy:
+  allow_implicit_invocation: true

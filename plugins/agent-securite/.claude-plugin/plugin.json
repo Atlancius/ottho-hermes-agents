@@ -1,0 +1,20 @@
+{
+  "name": "agent-securite",
+  "version": "1.0.0",
+  "description": "Installe sur ton VPS un agent Hermes qui surveille chaque heure la sécurité du serveur et de tes agents (conteneurs, ports, pare-feu, fail2ban, SSH, comptes, garde-fous Hermes) et t'alerte sur Telegram avec la preuve et la correction à appliquer. Il ne touche à rien lui-même.",
+  "author": {
+    "name": "Ottho Academy",
+    "url": "https://ottho.co"
+  },
+  "homepage": "https://ottho.co",
+  "keywords": [
+    "ottho",
+    "hermes-agent",
+    "vps",
+    "securite",
+    "ssh",
+    "fail2ban",
+    "pare-feu",
+    "telegram"
+  ]
+}

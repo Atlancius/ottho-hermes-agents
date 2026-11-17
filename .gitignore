@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.ottho-agents/
+.ottho-hermes/
+tests/private-denylist.txt

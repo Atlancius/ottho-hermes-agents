@@ -1,0 +1,38 @@
+{
+  "name": "agent-mail",
+  "version": "1.0.0",
+  "description": "Installe sur ton VPS un agent Hermes qui surveille ta boîte mail (IMAP : Gmail, Outlook, Hostinger, OVH, Ionos…), range chaque mail dans tes dossiers, prépare tes réponses en brouillon et te prévient sur Telegram. Il n'envoie jamais de mail.",
+  "author": {
+    "name": "Ottho Academy",
+    "url": "https://ottho.co"
+  },
+  "homepage": "https://ottho.co",
+  "keywords": [
+    "ottho",
+    "hermes-agent",
+    "mail",
+    "imap",
+    "telegram",
+    "brouillons",
+    "tri"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent mail (Hermes)",
+    "shortDescription": "Ton assistant mail Hermes : tri, brouillons, jamais d'envoi.",
+    "longDescription": "Agent mail Ottho pour Hermes Agent. Déclenchement IMAP IDLE, une session par mail entrant, tri dans tes catégories et dossiers, fournisseurs rangés par domaine, prospects signalés sur Telegram, brouillons de réponse appuyés sur ta base de connaissances et sur les faits que tu dictes au bot. Mode shadow d'abord (aucune modification de la boîte), live ensuite. Aucun outil d'envoi, aucun outil shell : le contenu d'un mail est traité comme une donnée non fiable.",
+    "developerName": "Ottho Academy",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://ottho.co",
+    "defaultPrompt": [
+      "Installe l'agent mail Hermes sur mon VPS.",
+      "Adapte le tri de mon agent mail à mes dossiers.",
+      "Où en est mon agent mail ?"
+    ],
+    "brandColor": "#8B7CF6"
+  }
+}

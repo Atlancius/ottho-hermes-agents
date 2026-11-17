@@ -1,0 +1,31 @@
+{
+  "name": "ottho-agents",
+  "owner": {
+    "name": "Ottho Academy",
+    "url": "https://ottho.co"
+  },
+  "description": "Agents Hermes prêts à installer sur ton VPS : mail, mises à jour, sécurité (Ottho Academy).",
+  "plugins": [
+    {
+      "name": "agent-mail",
+      "source": "./plugins/agent-mail",
+      "description": "Ton assistant mail Hermes : tri, brouillons, jamais d'envoi.",
+      "version": "1.0.0",
+      "category": "agents"
+    },
+    {
+      "name": "agent-updates",
+      "source": "./plugins/agent-updates",
+      "description": "Ton VPS à jour sans casse : système, Docker, Hermes.",
+      "version": "1.0.0",
+      "category": "agents"
+    },
+    {
+      "name": "agent-securite",
+      "source": "./plugins/agent-securite",
+      "description": "La garde de ton VPS : écarts détectés, corrections proposées.",
+      "version": "1.0.0",
+      "category": "agents"
+    }
+  ]
+}

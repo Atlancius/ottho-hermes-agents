@@ -1,0 +1,38 @@
+{
+  "name": "agent-updates",
+  "version": "1.0.0",
+  "description": "Installe sur ton VPS un agent Hermes qui suit chaque jour les mises à jour du système, de Docker et de Hermes Agent, lit les notes de version et te propose sur Telegram quoi faire, quand et avec quelle commande. Il n'applique rien lui-même.",
+  "author": {
+    "name": "Ottho Academy",
+    "url": "https://ottho.co"
+  },
+  "homepage": "https://ottho.co",
+  "keywords": [
+    "ottho",
+    "hermes-agent",
+    "vps",
+    "mises-a-jour",
+    "apt",
+    "docker",
+    "telegram"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent mises à jour (Hermes)",
+    "shortDescription": "Ton VPS à jour sans casse : système, Docker, Hermes.",
+    "longDescription": "Agent mises à jour Ottho pour Hermes Agent. Un collecteur root en lecture seule sur l'hôte dépose chaque matin un instantané stable (paquets en attente, sécurité, redémarrage, moteur et images Docker, version de chaque conteneur Hermes face à la dernière publication). L'agent n'a ni terminal ni root : il n'est réveillé que si quelque chose a changé, explique le risque et donne la commande exacte à taper. Bilan complet chaque lundi.",
+    "developerName": "Ottho Academy",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://ottho.co",
+    "defaultPrompt": [
+      "Installe l'agent mises à jour Hermes sur mon VPS.",
+      "Qu'est-ce qui attend une mise à jour sur mon VPS ?",
+      "Où en est mon agent mises à jour ?"
+    ],
+    "brandColor": "#8B7CF6"
+  }
+}

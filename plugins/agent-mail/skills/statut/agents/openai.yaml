@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent mail : statut"
+  short_description: "État et dépannage de l'agent mail"
+  default_prompt: "Où en est mon agent mail ? Utilise $statut."
+policy:
+  allow_implicit_invocation: true

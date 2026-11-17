@@ -1,0 +1,39 @@
+{
+  "name": "agent-securite",
+  "version": "1.0.0",
+  "description": "Installe sur ton VPS un agent Hermes qui surveille chaque heure la sécurité du serveur et de tes agents (conteneurs, ports, pare-feu, fail2ban, SSH, comptes, garde-fous Hermes) et t'alerte sur Telegram avec la preuve et la correction à appliquer. Il ne touche à rien lui-même.",
+  "author": {
+    "name": "Ottho Academy",
+    "url": "https://ottho.co"
+  },
+  "homepage": "https://ottho.co",
+  "keywords": [
+    "ottho",
+    "hermes-agent",
+    "vps",
+    "securite",
+    "ssh",
+    "fail2ban",
+    "pare-feu",
+    "telegram"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent sécurité (Hermes)",
+    "shortDescription": "La garde de ton VPS : écarts détectés, corrections proposées.",
+    "longDescription": "Agent sécurité Ottho pour Hermes Agent. Un collecteur root en lecture seule dépose chaque heure un instantané stable de la posture (aucun secret, seulement des noms, des états et des empreintes). L'agent n'a ni terminal ni root : il n'est réveillé que si quelque chose a changé, classe l'écart (critique à basse), donne la preuve, la cause probable et la commande de correction. Revue complète chaque lundi.",
+    "developerName": "Ottho Academy",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://ottho.co",
+    "defaultPrompt": [
+      "Installe l'agent sécurité Hermes sur mon VPS.",
+      "Ajoute mon adresse IP aux sources SSH connues de l'agent sécurité.",
+      "Où en est mon agent sécurité ?"
+    ],
+    "brandColor": "#8B7CF6"
+  }
+}

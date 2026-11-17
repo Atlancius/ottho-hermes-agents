@@ -1,0 +1,44 @@
+{
+  "name": "ottho-agents",
+  "interface": {
+    "displayName": "Ottho Academy — agents"
+  },
+  "plugins": [
+    {
+      "name": "agent-mail",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-mail"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "agent-updates",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-updates"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "agent-securite",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-securite"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
