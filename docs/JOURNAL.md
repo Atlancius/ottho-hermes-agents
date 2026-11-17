@@ -14,4 +14,5 @@
 - Dépôt public : https://github.com/Atlancius/ottho-hermes-agents (accord : dépôt public, étagère Formation IA Agent, visuels).
 - Avant publication : liste de motifs privés sortie de Git (`tests/private-denylist.txt`, ignoré), docs assainies (aucune référence à l'infrastructure de production), gitleaks sans fuite.
 - Vérifié : `claude plugin marketplace add Atlancius/ottho-hermes-agents` puis installation de `agent-securite@ottho-agents` (1.0.0, activé), puis retrait du plugin et de la marketplace sur le poste de l'auteur.
-- Couvertures : E-005. Fiches marketplace créées en brouillon, à relire avant publication.
+- Couvertures : E-005. Fiches marketplace créées en brouillon, publiées après accord de l'auteur : `plugin-agent-mail-hermes`, `plugin-agent-updates-hermes`, `plugin-agent-securite-hermes` (étagère Formation IA Agent).
+- Reste : E-006, test de l'agent mail sur une vraie boîte IMAP et un bot d'essai ; installation native non testée.
